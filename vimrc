@@ -50,12 +50,7 @@ set winwidth=84
 set winheight=5
 set winminheight=5
 set winheight=999
-
 set splitbelow splitright
-
-if has('mouse')
-  set mouse=a
-endif
 
 "  ---------------------------------------------------------------------------
 "  Text Formatting
@@ -88,10 +83,10 @@ endif
 " nnoremap <Right> :echoe "Use l"<CR>
 " nnoremap <Up> :echoe "Use k"<CR>
 " nnoremap <Down> :echoe "Use j"<CR>"
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
+nnoremap <up> <nop>
+noremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
 " Searching / moving
 nnoremap / /\v
@@ -114,8 +109,8 @@ nmap N Nzz
 nnoremap <leader>a :Ag
 "
 " Easy commenting
-nnoremap // :TComment<CR>
-vnoremap // :TComment<CR>
+nnoremap <up> :TComment<CR>
+vnoremap <up> :TComment<CR>
 
 " Switch between buffers
 noremap <tab> :bn<CR>
