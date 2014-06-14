@@ -59,7 +59,7 @@ set splitbelow splitright
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+" set expandtab
 
 set nowrap
 set textwidth=79
@@ -79,14 +79,14 @@ endif
 " the best way to ween yourself of arrow keys on to hjkl)
 " http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
 
-" nnoremap <Left> :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up> :echoe "Use k"<CR>
-" nnoremap <Down> :echoe "Use j"<CR>"
-nnoremap <up> <nop>
-noremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>"
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Searching / moving
 nnoremap / /\v
@@ -109,8 +109,8 @@ nmap N Nzz
 nnoremap <leader>a :Ag
 "
 " Easy commenting
-nnoremap <up> :TComment<CR>
-vnoremap <up> :TComment<CR>
+nnoremap <C-7> :TComment<CR>
+vnoremap <C-7> :TComment<CR>
 
 " Switch between buffers
 noremap <tab> :bn<CR>
@@ -193,7 +193,7 @@ let g:airline_theme = 'powerlineish'
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=
 
 " Python
-autocmd FileType python set sw=4 sts=4 et
+" autocmd FileType python set sw=4 sts=4 et
 
 " CoffeeScript
 let coffee_compile_vert = 1
