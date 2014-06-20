@@ -89,6 +89,10 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 
+map <up> <C-w>=
+map <down> <C-w>s
+map <right> <C-w>v
+
 "key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
