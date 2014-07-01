@@ -196,22 +196,22 @@ let g:airline_theme = 'powerlineish'
 "  ---------------------------------------------------------------------------
 "  Language Mappings
 "  ---------------------------------------------------------------------------
+if has("autocmd")
+	" Other files to consider Ruby
+	au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
 
-" Other files to consider Ruby
-au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=
+	" Python
+	autocmd FileType python setl ts= 4 sw=4 sts=4 noet
 
-" Python
-autocmd FileType python setl ts= 4 sw=4 sts=4 noet
+	" CoffeeScript
+	let coffee_compile_vert = 1
+	au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
-" CoffeeScript
-let coffee_compile_vert = 1
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
-
-" SASS / SCSS
-au BufNewFile,BufReadPost *.scss setl foldmethod=indent
-au BufNewFile,BufReadPost *.sass setl foldmethod=indent
-au BufRead,BufNewFile *.scss set filetype=scss
-
+	" SASS / SCSS
+	au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+	au BufNewFile,BufReadPost *.sass setl foldmethod=indent
+	au BufRead,BufNewFile *.scss set filetype=scss
+endif
 "  ---------------------------------------------------------------------------
 "  Directories
 "  ---------------------------------------------------------------------------
