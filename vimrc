@@ -200,7 +200,7 @@ let g:airline_theme = 'powerlineish'
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=
 
 " Python
-" autocmd FileType python set sw=4 sts=4 et
+autocmd FileType python set sw=4 sts=4 et
 
 " CoffeeScript
 let coffee_compile_vert = 1
