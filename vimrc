@@ -89,6 +89,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 
+
 "key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -255,7 +256,6 @@ endif
 "  Colors
 "  ---------------------------------------------------------------------------
 syntax enable
-" colorscheme monokai
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
