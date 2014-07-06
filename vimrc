@@ -49,7 +49,7 @@ set undofile
 set winwidth=84
 set winheight=5
 set winminheight=5
-set winheight=999
+" set winheight=999
 set splitbelow splitright
 
 "  ---------------------------------------------------------------------------
