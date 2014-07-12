@@ -22,6 +22,13 @@ syntax enable
 set autoread
 
 "  ---------------------------------------------------------------------------
+"	 AUTOCOMPLETE
+"  ---------------------------------------------------------------------------
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menu,longest
+
+
+"  ---------------------------------------------------------------------------
 "  UI
 "  ---------------------------------------------------------------------------
 
@@ -88,8 +95,6 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-
-
 "key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -108,6 +113,9 @@ set hlsearch
 " Center screen when scrolling search results
 nmap n nzz
 nmap N Nzz
+
+" Autocomplete
+inoremap <C-Space> <C-x><C-o>
 
 " ACK
 " set grepprg=ack
