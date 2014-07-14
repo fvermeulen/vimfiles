@@ -51,6 +51,7 @@ set laststatus=2
 set number
 set norelativenumber
 set undofile
+set nofoldenable
 
 " Auto adjust window sizes when they become current
 set winwidth=84
