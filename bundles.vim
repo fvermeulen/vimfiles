@@ -30,6 +30,9 @@ Bundle 'git://github.com/Townk/vim-autoclose.git'
 Bundle 'git://github.com/godlygeek/tabular.git'
 Bundle 'git://github.com/scrooloose/syntastic.git'
 
+" colorschemes
+Bundle 'https://github.com/endel/vim-github-colorscheme'
+Bundle 'https://github.com/chriskempson/vim-tomorrow-theme'
 " Language Support
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/tpope/vim-haml.git'
