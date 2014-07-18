@@ -220,6 +220,7 @@ if has("autocmd")
 	au BufNewFile,BufReadPost *.scss setl foldmethod=indent
 	au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 	au BufRead,BufNewFile *.scss set filetype=scss
+  autocmd BufNewFile, BufRead *.html.erb set filetype=html.erb
 endif
 "  ---------------------------------------------------------------------------
 "  Directories
