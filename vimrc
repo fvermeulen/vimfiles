@@ -49,7 +49,6 @@ set undofile
 set winwidth=84
 set winheight=5
 set winminheight=5
-" set winheight=999
 set splitbelow splitright
 
 "  ---------------------------------------------------------------------------
@@ -64,6 +63,7 @@ set softtabstop=2
 set nowrap
 set textwidth=79
 set formatoptions=n
+set nofoldenable
 
 " check to make sure vim has been compiled with colorcolumn support
 " before enabling it
