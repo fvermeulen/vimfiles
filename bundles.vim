@@ -29,6 +29,7 @@ Bundle 'git://github.com/tomtom/tcomment_vim.git'
 Bundle 'git://github.com/Townk/vim-autoclose.git'
 Bundle 'git://github.com/godlygeek/tabular.git'
 Bundle 'git://github.com/scrooloose/syntastic.git'
+" Bundle 'https://github.com/Valloric/YouCompleteMe'
 
 " colorschemes
 Bundle 'https://github.com/endel/vim-github-colorscheme'
