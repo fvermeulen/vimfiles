@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/dennis/Basic_Programming/Markdown_Parser'
-let g:netrw_dirhist_2='/home/dennis/Basic_Programming/Basic_Programming_Website'
-let g:netrw_dirhist_3='/home/dennis/Basic_Programming/Basic_Programming_Website/bin'
-let g:netrw_dirhist_4='/home/dennis/Basic_Programming/Basic_Programming_Website'
