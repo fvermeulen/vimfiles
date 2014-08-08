@@ -1,12 +1,10 @@
-silent! runtime bundles.vim
-runtime plugins/bclose.vim
-
 "  ---------------------------------------------------------------------------
 "  General
 "  ---------------------------------------------------------------------------
 filetype plugin indent on
 let mapleader = ","
 let g:mapleader = ","
+set modelines=0
 syntax enable
 set nobackup
 set nowritebackup
@@ -50,7 +48,6 @@ set winwidth=84
 set winheight=5
 set winminheight=5
 set splitbelow splitright
-
 
 "  ---------------------------------------------------------------------------
 "  Text Formatting
@@ -128,16 +125,12 @@ nmap <leader>D :bufdo bd<CR>
 
 " Ignore some binary, versioning and backup files when auto-completing
 set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak
-" Set a lower priority for .old files
-set suffixes+=.old
 
-" Ignore some binary, versioning and backup files when auto-completing
-set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak
 " Set a lower priority for .old files
 set suffixes+=.old
 
 " rvm-vim automatically as you switch from buffer to buffer
-:autocmd BufEnter * Rvm
+":autocmd BufEnter * Rvm
 
 
 "  ---------------------------------------------------------------------------
@@ -174,7 +167,8 @@ if has("autocmd")
 	au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 	" SASS / SCSS
-	au BufNewFile,BufReadPost *.scss,*.sass setl foldmethod=indent
+	au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+	au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 	au BufRead,BufNewFile *.scss set filetype=scss
   autocmd BufNewFile, BufRead *.html.erb set filetype=html.erb
 endif
@@ -225,3 +219,40 @@ nmap <leader>f :CtrlP<cr>
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+
+" Press F5 to toggle GUndo tree
+nnoremap <F5> :GundoToggle<CR>
+
+" indent file and return cursor and center cursor
+map   <silent> <F6> mmgg=G`m^zz
+imap  <silent> <F6> <Esc> mmgg=G`m^zz
+
+" Add settings for tabular
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
+
+" Tabularize
+if exists(":Tab")
+  nmap <leader>a\| :Tab /\|<CR>
+  vmap <leader>a\| :Tab /\|<CR>
+  nmap <leader>a= :Tab /=<CR>
+  vmap <leader>a= :Tab /=<CR>
+  nmap <leader>a: :Tab /:\zs<CR>
+  vmap <leader>a: :Tab /:\zs<CR>
+endif
+
+
+
+" When vimrc, either directly or via symlink, is edited, automatically reload it
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost vimrc source %
