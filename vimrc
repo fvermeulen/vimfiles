@@ -1,3 +1,5 @@
+silent! runtime bundles.vim
+runtime plugins/bclose.vim
 "  ---------------------------------------------------------------------------
 "  General
 "  ---------------------------------------------------------------------------
@@ -196,14 +198,12 @@ if $COLORTERM == 'gnome-terminal'
 endif
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme jellybeans
+colorscheme solarized
 
 
 "  ---------------------------------------------------------------------------
 "  Plugins
 "  ---------------------------------------------------------------------------
-silent! runtime bundles.vim
-runtime plugins/bclose.vim
 
 " eradicate all trailing whitespace all the time
 let g:DeleteTrailingWhitespace = 1
