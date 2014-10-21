@@ -186,7 +186,8 @@ if has("gui_running")
   set guioptions-=l " no scrollbar on the left
   set guioptions-=b " no scrollbar on the bottom
   set guioptions=aiA
-  " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+  set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 12
+  colorscheme railscasts
 endif
 
 
@@ -196,9 +197,9 @@ endif
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 
 
 "  ---------------------------------------------------------------------------
