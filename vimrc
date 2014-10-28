@@ -177,6 +177,10 @@ endif
 
 
 "  ---------------------------------------------------------------------------
+"  Colors
+"  ---------------------------------------------------------------------------
+
+"  ---------------------------------------------------------------------------
 "   MacVIM / Gvim / Terminal vim setting
 "  ---------------------------------------------------------------------------
 if has("gui_running")
@@ -188,18 +192,16 @@ if has("gui_running")
   set guioptions=aiA
   set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 10
   colorscheme railscasts
+else
+  if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+  endif
+  let g:solarized_termcolors=256
+  set background=dark
+  colorscheme jellybeans
 endif
 
 
-"  ---------------------------------------------------------------------------
-"  Colors
-"  ---------------------------------------------------------------------------
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-let g:solarized_termcolors=256
-set background=dark
-colorscheme jellybeans
 
 
 "  ---------------------------------------------------------------------------
