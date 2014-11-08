@@ -127,6 +127,7 @@ nmap <leader>D :bufdo bd<CR>
 
 " Ignore some binary, versioning and backup files when auto-completing
 set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak
+set wildignore+=**/build/**,**/target/**
 
 " Set a lower priority for .old files
 set suffixes+=.old
