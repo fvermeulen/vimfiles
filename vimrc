@@ -110,6 +110,9 @@ nmap N Nzz
 " set grepprg=ack
 " nnoremap <leader>a :Ack
 
+" New Tab
+nnoremap <leader>t :tabnew<CR>
+
 " AG
 nnoremap <leader>a :Ag
 
@@ -127,7 +130,7 @@ nmap <leader>D :bufdo bd<CR>
 
 " Ignore some binary, versioning and backup files when auto-completing
 set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak
-set wildignore+=**/build/**,**/target/**
+set wildignore+=**/build/**,**/target/**,**/cms-assets/**,**/tmp/**,**/vendor/**
 
 " Set a lower priority for .old files
 set suffixes+=.old
