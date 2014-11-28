@@ -194,8 +194,17 @@ if has("gui_running")
   set guioptions-=l " no scrollbar on the left
   set guioptions-=b " no scrollbar on the bottom
   set guioptions=aiA
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
-  " set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h15
+
+  " Fonts
+  " set guifont=Anonymous\ Pro\ for\ Powerline\ 11
+  " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+  " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+  " set guifont=Inconsolata-dz\ for\ Powerline\ 10
+  " set guifont=LiberationMono\ for\ Powerline\ 10
+  set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline\ 12
+  " set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
+  " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+
   colorscheme railscasts
 else
   if $COLORTERM == 'gnome-terminal'
@@ -203,7 +212,7 @@ else
   endif
   let g:solarized_termcolors=256
   set background=dark
-  colorscheme jellybeans
+  colorscheme solarized
 endif
 
 
