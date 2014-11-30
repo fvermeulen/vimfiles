@@ -113,6 +113,15 @@ nmap N Nzz
 " New Tab
 nnoremap <leader>t :tabnew<CR>
 
+" Open Explor
+nnoremap <leader>e :Explore<CR>
+
+" Paste from plus board
+nnoremap <leader>+ "+p
+
+" Paste from * board
+nnoremap <leader>* "*p
+
 " AG
 nnoremap <leader>a :Ag
 
@@ -166,7 +175,7 @@ if has("autocmd")
 	au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
 
 	" Python
-	autocmd FileType python setl ts= 4 sw=4 sts=4 noet
+	autocmd FileType python setl ts=4 sw=4 sts=4 noet
 
 	" CoffeeScript
 	let coffee_compile_vert = 1
@@ -201,9 +210,9 @@ if has("gui_running")
   " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
   " set guifont=Inconsolata-dz\ for\ Powerline\ 10
   " set guifont=LiberationMono\ for\ Powerline\ 10
-  set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline\ 12
+  " set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline\ 12
   " set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
-  " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 
   colorscheme railscasts
 else
