@@ -210,16 +210,16 @@ if has("gui_running")
   " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
   " set guifont=Inconsolata-dz\ for\ Powerline\ 10
   " set guifont=LiberationMono\ for\ Powerline\ 10
-  " set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline\ 12
+  set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h14
   " set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
-  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+  " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 
-  colorscheme railscasts
+  colorscheme solarized
 else
   if $COLORTERM == 'gnome-terminal'
     set t_Co=256
   endif
-  let g:solarized_termcolors=256
+  " let g:solarized_termcolors=256
   set background=dark
   colorscheme solarized
 endif
@@ -277,11 +277,6 @@ if exists(":Tab")
   vmap <leader>a: :Tab /:\zs<CR>
 endif
 
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-endif
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
